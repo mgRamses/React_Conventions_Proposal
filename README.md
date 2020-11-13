@@ -46,11 +46,14 @@ Las ventajas de comentar código lo mínimo posible son:
 
 ### Nombrar el componente después dela función
 
-### Usar mayúsuclas para los nombres de componentes
+### Desestructura los props
 
 ### Cuidado con las otras convenciones de nomenclatura
 
 ### Separar el manejo de esatdo del renderizado
+
+### Usar useReducer si useState se vuelve complejo
+Cuando empieza a haber múltiples estados a los que seguir, el uso de useState comienza a ser dificil de manejar. Al hacer uso de useState, muchas veces se tienen que declarar funciones dentro del hook para averiguar la siguiente parte del estado, además de escribir la lógica, mientras que con useReducer no se tiene que hacer eso y en su lugar se mueven a la función reductora. Solo se debe llamar al tipo de acción y listo.
 
 ### Usar librerías de snippets
 
