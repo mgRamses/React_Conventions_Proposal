@@ -64,16 +64,39 @@ Las ventajas de comentar código lo mínimo posible son:
 - ***Nombre de archivos***: Usar PascalCase para los nombres de archivos. 
 - ***Nombres de referencias***: Usar PascalCase para componentes de React y camelCase para sus instancias. 
     ```jsx
-    // bad
+    // no recomendado
     import reservationCard from './ReservationCard';
 
-    // good
+    // Recomendado
     import ReservationCard from './ReservationCard';
 
-    // bad
+    // no recomendado
     const ReservationItem = <ReservationCard />;
 
-    // good
+    // Recomendado
     const reservationItem = <ReservationCard />;
     ```
+- ***Nombres de componentes**: Usar el nombre del archivo como el nombre del componente. Por ejemplo, ReservationCard.jsx deberá de tener un nombre de referencia de ReservationCard. 
+    ```jsx
+    // bad
+    import Footer from './Footer/Footer';
 
+    // bad
+    import Footer from './Footer/index';
+
+    // good
+    import Footer from './Footer';
+    ```
+- ***Nombres de componentes de orden superior***: 
+
+- ***Nombre de props***: Evita usar 
+    ```jsx
+    // bad
+    <MyComponent style="fancy" />
+
+    // bad
+    <MyComponent className="fancy" />
+
+    // good
+    <MyComponent variant="fancy" />
+    ```
