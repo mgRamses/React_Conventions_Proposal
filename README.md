@@ -55,6 +55,15 @@ Las ventajas de comentar código lo mínimo posible son:
 ### Usar useReducer si useState se vuelve complejo
 Cuando empieza a haber múltiples estados a los que seguir, el uso de useState comienza a ser dificil de manejar. Al hacer uso de useState, muchas veces se tienen que declarar funciones dentro del hook para averiguar la siguiente parte del estado, además de escribir la lógica, mientras que con useReducer no se tiene que hacer eso y en su lugar se mueven a la función reductora. Solo se debe llamar al tipo de acción y listo.
 
+### Poner en orden las cosas
+Escribir los import en un orden definido ayudará a la ontención de un código limpio.
+1. React import
+1. Imports de librerías (en orden alfabético)
+1. Imports absolutos del proyecto (en orden alfabético)
+1. Imports relativos (en orden alfabético)
+1. import * as
+1. import './<some file>.<some ext>'
+  
 ### Usar librerías de snippets
 
 ### Escribir pruebas para todo el código
@@ -81,25 +90,25 @@ Cuando empieza a haber múltiples estados a los que seguir, el uso de useState c
     ```
 - ***Nombres de componentes**: Usar el nombre del archivo como el nombre del componente. Por ejemplo, ReservationCard.jsx deberá de tener un nombre de referencia de ReservationCard. 
     ```jsx
-    // bad
+    // no recomendado
     import Footer from './Footer/Footer';
 
-    // bad
+    // no recomendado
     import Footer from './Footer/index';
 
-    // good
+    // Recomendado
     import Footer from './Footer';
     ```
 - ***Nombres de componentes de orden superior***: 
 
 - ***Nombre de props***: Evita usar 
     ```jsx
-    // bad
+    // no recomendado
     <MyComponent style="fancy" />
 
-    // bad
+    // no recomendado
     <MyComponent className="fancy" />
 
-    // good
+    // Recomendado
     <MyComponent variant="fancy" />
     ```
