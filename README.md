@@ -19,7 +19,7 @@ Recopilación de buenas prácticas para React en proyectos de mediana a gran esc
 
 1. Escudriñar el código en busca de patrones y similitudes.
 
-  ```jsx
+  ```elixir
     const buttons = ['facebook', 'twitter', 'youtube'];
 
     return (
@@ -36,4 +36,44 @@ Recopilación de buenas prácticas para React en proyectos de mediana a gran esc
       }
     </div>
    );
+   ```
+### Comment only where necessary
+Las ventajas de comentar código lo mínimo posible son: 
+
+1. Mantendrá el código visualmente libre de desorden.
+
+1. Evitará un posible conflicto entre el comentario y el código si modifica el código en algún momento posterior.
+
+### Nombrar el componente después dela función
+
+### Usar mayúsuclas para los nombres de componentes
+
+### Cuidado con las otras convenciones de nomenclatura
+
+### Separar el manejo de esatdo del renderizado
+
+### Usar librerías de snippets
+
+### Escribir pruebas para todo el código
+
+### Utilizar un linter, romper con líneas demasiado largas
+
+## Naming
+
+- ***Extensiones***: Usar la extensión .jsx para los componentes.
+- ***Nombre de archivos***: Usar PascalCase para los nombres de archivos. 
+- ***Nombres de referencias***: Usar PascalCase para componentes de React y camelCase para sus instancias. 
+    ```jsx
+    // bad
+    import reservationCard from './ReservationCard';
+
+    // good
+    import ReservationCard from './ReservationCard';
+
+    // bad
+    const ReservationItem = <ReservationCard />;
+
+    // good
+    const reservationItem = <ReservationCard />;
     ```
+
