@@ -19,21 +19,21 @@ Recopilación de buenas prácticas para React en proyectos de mediana a gran esc
 
 1. Escudriñar el código en busca de patrones y similitudes.
 
-  ```elixir
+  ```jsx
     const buttons = ['facebook', 'twitter', 'youtube'];
 
     return (
-  <div>
-    {
-      buttons.map( (button) => {
-        return (
-          <IconButton
-            onClick={doStuff( button )}
-            iconClass={button}
-          />
-        );
-      } )
-    }
-  </div>
-);
- ```
+    <div>
+      {
+        buttons.map( (button) => {
+          return (
+            <IconButton
+              onClick={doStuff( button )}
+              iconClass={button}
+            />
+          );
+        } )
+      }
+    </div>
+   );
+    ```
