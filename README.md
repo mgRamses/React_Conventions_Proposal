@@ -48,6 +48,9 @@ Las ventajas de comentar código lo mínimo posible son:
 
 ### Desestructura los props
 
+### No utilizar `React.createElement`
+A menos que se esté inicializando la App desde un archivo que no es JSX.
+
 ### Cuidado con las otras convenciones de nomenclatura
 
 ### Separar el manejo de esatdo del renderizado
