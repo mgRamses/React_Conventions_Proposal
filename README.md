@@ -70,7 +70,6 @@ Escribir los import en un orden definido ayudará a la ontención de un código 
 ### Importar módulos indiviales en lugar del paquete completo cuando sea necesario
 Hacer esto ayuda al performance de la aplicación. La lógica para este funcionamiento se rige por una funcionalidad llamado Tree Shaking, de Webpack.
 
-    ```jsx
     // no recomendado
     import React from 'react';
     const [state, setState] = React.useState('');
@@ -78,7 +77,6 @@ Hacer esto ayuda al performance de la aplicación. La lógica para este funciona
     // Recomendado
     import {useState} from 'react;
     const [state, setState] = useState('');
-    ```
   
 ### Usar librerías de snippets
 La principal ventaja de usar estas librerías es poder manternse al día respecto a la sintaxis del lenguaje. Sumado a esto, ayudan a poder mantener el código libre de errores. Existen distintas librerías, como ES7 React, Redux, JS Snippets, entre otras.
