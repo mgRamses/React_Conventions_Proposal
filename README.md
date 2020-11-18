@@ -69,6 +69,19 @@ Escribir los import en un orden definido ayudará a la ontención de un código 
 
 ### Importar módulos indiviales en lugar del paquete completo cuando sea necesario
 Hacer esto ayuda al performance de la aplicación. La lógica para este funcionamiento se rige por una funcionalidad llamado Tree Shaking, de Webpack.
+```jsx
+    // no recomendado
+    import reservationCard from './ReservationCard';
+
+    // Recomendado
+    import ReservationCard from './ReservationCard';
+
+    // no recomendado
+    const ReservationItem = <ReservationCard />;
+
+    // Recomendado
+    const reservationItem = <ReservationCard />;
+    ```
 
     // no recomendado
     import React from 'react';
