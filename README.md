@@ -55,9 +55,6 @@ Brinda claridad al código haciendo más fácil su lectura y la implementación 
 ### No utilizar `React.createElement`
 A menos que se esté inicializando la App desde un archivo que no es JSX.
 
-### Separar el manejo de estado del renderizado
-Es buena idea tener un componente con estado para la carga de los datos y otro componente sin estado para mostrar los datos. Esto reduce la complejidad de los componetes. 
-
 ### Usar useReducer si useState se vuelve complejo
 Cuando empieza a haber múltiples estados a los que seguir, el uso de useState comienza a ser dificil de manejar. Al hacer uso de useState, muchas veces se tienen que declarar funciones dentro del hook para averiguar la siguiente parte del estado, además de escribir la lógica, mientras que con useReducer no se tiene que hacer eso y en su lugar se mueven a la función reductora. Solo se debe llamar al tipo de acción y listo.
 
@@ -69,6 +66,19 @@ Escribir los import en un orden definido ayudará a la ontención de un código 
 1. Imports relativos (en orden alfabético)
 1. import * as
 1. import './<some file>.<some ext>'
+
+### Importar módulos indiviales en lugar del paquete completo cuando sea necesario
+Hacer esto ayuda al performance de la aplicación. La lógica para este funcionamiento se rige por una funcionalidad llamado Tree Shaking, de Webpack.
+
+    ```jsx
+    // no recomendado
+    import React from 'react';
+    const [state, setState] = React.useState('');
+
+    // Recomendado
+    import {useState} from 'react;
+    const [state, setState] = useState('');
+    ```
   
 ### Usar librerías de snippets
 La principal ventaja de usar estas librerías es poder manternse al día respecto a la sintaxis del lenguaje. Sumado a esto, ayudan a poder mantener el código libre de errores. Existen distintas librerías, como ES7 React, Redux, JS Snippets, entre otras.
