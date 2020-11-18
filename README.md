@@ -37,12 +37,14 @@ Recopilación de buenas prácticas para React en proyectos de mediana a gran esc
     </div>
    );
    ```
-### Comment only where necessary
+### Comentar solo donde sea necesario
 Las ventajas de comentar código lo mínimo posible son: 
 
 1. Mantendrá el código visualmente libre de desorden.
 
 1. Evitará un posible conflicto entre el comentario y el código si modifica el código en algún momento posterior.
+
+1. En componentes, después de los imports comentar la función general del componente.
 
 ### Nombrar el componente después dela función
 
@@ -68,6 +70,7 @@ Escribir los import en un orden definido ayudará a la ontención de un código 
 1. import './<some file>.<some ext>'
   
 ### Usar librerías de snippets
+La principal ventaja de usar estas librerías es poder manternse al día respecto a la sintaxis del lenguaje. Sumado a esto, ayudan a poder mantener el código libre de errores. Existen distintas librerías, como ES7 React, Redux, JS Snippets, entre otras.
 
 ### Escribir pruebas para todo el código
 
