@@ -1,4 +1,4 @@
-# React_Conventions_Proposal
+# React Conventions Proposal
 Recopilación de buenas prácticas para React en proyectos de mediana a gran escala.
 
 ### Mantener componentes pequeños y orientados a una función específica.
@@ -50,13 +50,13 @@ Las ventajas de comentar código lo mínimo posible son:
 Si se nombra el componente en base a la necesidad del código, se podría crear confusión más adelante. Nombrar el componente como "Avatar" es mejor a nombrarlo "AuthorAvatar" ya que este último limita la utilidad del componente.
 
 ### Desestructura los props
+Brinda claridad al código haciendo más fácil su lectura y la implementación de funcionalidades.
 
 ### No utilizar `React.createElement`
 A menos que se esté inicializando la App desde un archivo que no es JSX.
 
-### Cuidado con las otras convenciones de nomenclatura
-
-### Separar el manejo de esatdo del renderizado
+### Separar el manejo de estado del renderizado
+Es buena idea tener un componente con estado para la carga de los datos y otro componente sin estado para mostrar los datos. Esto reduce la complejidad de los componetes. 
 
 ### Usar useReducer si useState se vuelve complejo
 Cuando empieza a haber múltiples estados a los que seguir, el uso de useState comienza a ser dificil de manejar. Al hacer uso de useState, muchas veces se tienen que declarar funciones dentro del hook para averiguar la siguiente parte del estado, además de escribir la lógica, mientras que con useReducer no se tiene que hacer eso y en su lugar se mueven a la función reductora. Solo se debe llamar al tipo de acción y listo.
@@ -74,8 +74,10 @@ Escribir los import en un orden definido ayudará a la ontención de un código 
 La principal ventaja de usar estas librerías es poder manternse al día respecto a la sintaxis del lenguaje. Sumado a esto, ayudan a poder mantener el código libre de errores. Existen distintas librerías, como ES7 React, Redux, JS Snippets, entre otras.
 
 ### Escribir pruebas para todo el código
+Crear una carpeta llamada __test__ que contenta la misma estructura de los comonentes a probar. Es habitual dividir las pruebas en dos grandes áreas: probar la funcionalidad en el código directamente y probar la función de la aplicación ejecutandose en dispositivos con herramientas como Cypress.
 
 ### Utilizar un linter, romper con líneas demasiado largas
+Un linter revisar nuestro código tratando de encontrar errores que podrían provocar problemas de compilación o bien futuros bugs en nuestro desarrollo.
 
 ## Naming
 
@@ -106,8 +108,6 @@ La principal ventaja de usar estas librerías es poder manternse al día respect
     // Recomendado
     import Footer from './Footer';
     ```
-- ***Nombres de componentes de orden superior***: 
-
 - ***Nombre de props***: Evita usar 
     ```jsx
     // no recomendado
