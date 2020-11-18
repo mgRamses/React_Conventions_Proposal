@@ -46,7 +46,8 @@ Las ventajas de comentar código lo mínimo posible son:
 
 1. En componentes, después de los imports comentar la función general del componente.
 
-### Nombrar el componente después dela función
+### Nombrar el componente después de la función
+Si se nombra el componente en base a la necesidad del código, se podría crear confusión más adelante. Nombrar el componente como "Avatar" es mejor a nombrarlo "AuthorAvatar" ya que este último limita la utilidad del componente.
 
 ### Desestructura los props
 
